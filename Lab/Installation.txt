@@ -1,0 +1,3 @@
+1. install java jdk from internet
+2. use javac to compile file 	eg. - javac Addition.java
+3. java to run 		eg. - java Addition
