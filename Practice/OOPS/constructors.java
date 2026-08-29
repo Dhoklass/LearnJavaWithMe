@@ -75,6 +75,27 @@ class derived extends base{
 
 
 }
+//single inheritance - class derived extends base
+
+class derived2 extends derived{
+    String phoneNo;
+
+    derived2(String name, int id, int age, int salary, String phoneNo){
+        super(name, id, age, salary);
+        this.phoneNo = phoneNo;
+    }
+
+    public derived2() {
+        phoneNo = "0";
+    }
+
+    
+
+    public void displayDetails(){
+        super.displayDetails();
+        System.out.println("phone no: " + phoneNo);
+    }
+}
 
 class constructors{
     public static void main(String[] args) {
@@ -91,5 +112,8 @@ class constructors{
 
         derived d2 = new derived("Harsh", 101, 21, 22000);
         d2.displayDetails();
+
+        derived2 dd2 = new derived2("Darshan", 103, 22, 25000, "851 935 5636");
+        dd2.displayDetails();
     }
 }
