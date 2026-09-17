@@ -23,5 +23,8 @@ class abstraction{
             a.makeSound();
             a.sleep();
         
+        animal a = new animal();
+        
+        
     }
 }
