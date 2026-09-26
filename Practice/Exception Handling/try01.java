@@ -43,14 +43,17 @@ class try01{
             } catch (ArithmeticException e){    // Checks condition 1
                 System.out.println("Can't divide by zero!");
                 System.out.println(e);
+                System.out.println(e.getMessage()); 
 
             } catch (ArrayIndexOutOfBoundsException e) {    // Checks condition 2
                 System.out.println("Error,  Invalid index entered");        // Error message displayed by the code
                 System.out.println(e);      // Catching the error and printing it to the console!
-        
+                System.out.println(e.getMessage());
+
             } catch(Exception e){   // Checks for any other error occurances other then the 2 defined above
                 System.out.println("Some Error occured!");
                 System.out.println(e);
+                System.out.println(e.getMessage());
             
             } finally{
                 System.out.println("\nExecuted successfully!");         // Executes even if catch executes or not!
