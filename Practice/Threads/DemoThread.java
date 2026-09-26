@@ -1,8 +1,8 @@
 class MyThread extends Thread{
     public void run(){
         int i = 0;
-        while (i <= 10){
-            System.out.println("running");
+        while (i <= 100){
+            System.out.println("Cooking food");
             i++;
         }
     }
@@ -11,8 +11,8 @@ class MyThread extends Thread{
 class MyThread2 extends Thread{
     public void run(){
         int i = 0;
-        while (i <= 10){
-            System.out.println("running2");
+        while (i <= 100){
+            System.out.println("Chatting with her!");
             i++;
         }
     }
