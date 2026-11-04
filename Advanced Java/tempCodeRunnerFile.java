@@ -1,3 +1,4 @@
-for(int x : l1){
-        //     System.out.print(x + ", ");
-        // }
+            
+            // for(int x : list2){
+            //     System.out.print(x + ", ");
+            // }

@@ -154,6 +154,8 @@ class arrayList{
             System.out.print(x + ", ");
         }
         
+        System.out.println("\n");
+
         // Descending order: 
         list2.sort(Collections.reverseOrder());
         // Collections.sort(list2, Collections.reverseOrder());
@@ -167,14 +169,16 @@ class arrayList{
         // Collections.shuffle(list2);
         // Collections.max(list2);
         // Collections.min(list2);
-        // Collections.swap(list2, 0, 2);     // swap elements at index 0 and 2
-        // Collections.frequency(list2, "B");  // how many times B appears
-
         
+        System.out.println("\n");
 
+        // swap elements at index 0 and 2
+            Collections.swap(list2, 0, 2);
+            
+            // for(int x : list2){
+            //     System.out.print(x + ", ");
+            // }
 
-
-
-
+        // Collections.frequency(list2, "B");  // how many times B appears
     }
 }
