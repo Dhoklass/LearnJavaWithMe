@@ -179,6 +179,6 @@ class arrayList{
             //     System.out.print(x + ", ");
             // }
 
-        // Collections.frequency(list2, "B");  // how many times B appears
+        // Collections.frequency(list2, "B");  // how many times B appears 
     }
 }
