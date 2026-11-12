@@ -82,6 +82,7 @@ class LinkedList_Practice{
         System.out.println("Sum of l5: " + z);
 
         System.out.println("Average of l5: " + z/l5.size());
+
     }
 
 }
