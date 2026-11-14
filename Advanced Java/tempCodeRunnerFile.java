@@ -1,4 +1,2 @@
-            
-            // for(int x : list2){
-            //     System.out.print(x + ", ");
-            // }
+   // h1.removeAll(h2);
+        // System.out.println(h1);
