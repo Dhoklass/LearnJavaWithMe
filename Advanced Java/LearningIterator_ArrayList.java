@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-class LearningIterator{
+class LearningIterator_ArrayList{
     public static void main(String[] args) {
         ArrayList <Integer> lessthan = new ArrayList<>( List.of(10, 60, 30, 80, 40, 90, 20));
 
