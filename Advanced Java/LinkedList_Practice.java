@@ -67,8 +67,8 @@ class LinkedList_Practice{
 
         int y = l5.getFirst();
         for(int i : l5){
-            if(i < x){
-                x = i;
+            if(i < y){
+                y = i;
             }
         }
         
