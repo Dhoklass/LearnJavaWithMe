@@ -83,5 +83,23 @@ class LearningListIterator{
         }   
         
         System.out.println("After removing every no smaller than 40: " + list5);
+
+        // Remove duplicates
+        ArrayList<Integer> list6 = new ArrayList<>(List.of(10, 20, 10, 30, 20, 40, 30, 50));
+        HashSet <Integer> hs = new HashSet<>();
+        ListIterator <Integer> li6 = list6.listIterator();
+
+        while(li6.hasNext()){
+            int num5 = li6.next();
+
+            if(hs.contains(num5)){
+                li6.remove();
+            }
+            else{
+                hs.add(num5);
+            }
+        }
+        System.out.println(list6);
+        System.out.println(hs);
     }
 }
