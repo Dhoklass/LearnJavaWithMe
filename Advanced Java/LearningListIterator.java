@@ -17,7 +17,7 @@ class LearningListIterator{
             System.out.println(li.previous());
          }
 
-         // Inserting 100 after every element greater than 25
+        // Inserting 100 after every element greater than 25
         ArrayList<Integer> list2 = new ArrayList<>(List.of(10, 20, 30, 40, 50));
         ListIterator <Integer> li2 = list2.listIterator();
 
@@ -31,6 +31,21 @@ class LearningListIterator{
             }
         }
         System.out.println("After insertion of 100 after every element greater than 25: " + list2);
-         
+
+        // Replace element greater than 30 with 0 
+        ArrayList<Integer> list3 = new ArrayList<>(List.of(10, 20, 30, 40, 50, 60));
+        ListIterator <Integer> li3 = list3.listIterator();
+        
+        System.out.println("Before replacing every no greater than 30 with 0: " + list3);
+        while(li3.hasNext()){
+            int num2 = li3.next();
+
+            if(num2 > 30){
+                li3.set(0);
+            }
+
+        }   
+        
+        System.out.println("After replacing every no greater than 30 with 0: " + list3);        
     }
 }
