@@ -38,6 +38,17 @@ class LearningIterator{
         System.out.println("hashset: " + hs);
 
         //removing strings with less than 5 characters
-        
+        ArrayList<String> names = new ArrayList<>(List.of("Java", "Python", "C++", "Spring", "HTML", "JavaScript"));
+
+        Iterator <String> it3 = names.iterator();
+        System.out.println("Names before removal: " + names);
+        while(it3.hasNext()){
+            String name = it3.next();
+
+            if(name.length() < 5){
+                it3.remove();
+            }
+        }
+        System.out.println("Names after removal: " + names);
     }
 }
