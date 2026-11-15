@@ -64,5 +64,26 @@ class LearningIterator{
             }
         }
         System.out.println("After removal of Negative nos: " + numbers);
+    
+        // Removing elements greater than Average
+        ArrayList<Integer> gnumbers = new ArrayList<>(List.of(10, 20, 30, 40, 50, 60));
+
+        int sum = 0;
+        for( int i : gnumbers){
+            sum += i;
+        }
+        int avg = sum/gnumbers.size();
+
+        System.out.println("Before removing no's greater than average: " + gnumbers);
+        Iterator <Integer> it5 = gnumbers.iterator();
+        while (it5.hasNext()) {
+            
+            int m = it5.next();
+            
+            if(m > avg){
+                it5.remove();
+            }
+        }
+        System.out.println("After removing no's greater than average: " + gnumbers);
     }
 }
