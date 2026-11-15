@@ -50,5 +50,19 @@ class LearningIterator{
             }
         }
         System.out.println("Names after removal: " + names);
+
+        // Removing negative elements
+        ArrayList<Integer> numbers = new ArrayList<>(List.of(10, -20, 30, -40, 50, -60, 70));
+
+        System.out.println("Before removal of Negative nos: " + numbers);
+        Iterator <Integer> it4 = numbers.iterator();
+        while(it4.hasNext()){
+            int n = it4.next();
+
+            if(n < 0){
+                it4.remove();
+            }
+        }
+        System.out.println("After removal of Negative nos: " + numbers);
     }
 }
