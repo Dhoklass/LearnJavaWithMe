@@ -21,7 +21,7 @@ class LearningListIterator{
         ArrayList<Integer> list2 = new ArrayList<>(List.of(10, 20, 30, 40, 50));
         ListIterator <Integer> li2 = list2.listIterator();
 
-        System.out.println("Before insertion of 100 after every element element greater than 25: " + list2);
+        System.out.println("\nBefore insertion of 100 after every element element greater than 25: " + list2);
 
         while(li2.hasNext()){
             int num = li2.next();
@@ -36,7 +36,7 @@ class LearningListIterator{
         ArrayList<Integer> list3 = new ArrayList<>(List.of(10, 20, 30, 40, 50, 60));
         ListIterator <Integer> li3 = list3.listIterator();
         
-        System.out.println("Before replacing every no greater than 30 with 0: " + list3);
+        System.out.println("\nBefore replacing every no greater than 30 with 0: " + list3);
         while(li3.hasNext()){
             int num2 = li3.next();
 
@@ -46,6 +46,42 @@ class LearningListIterator{
 
         }   
         
-        System.out.println("After replacing every no greater than 30 with 0: " + list3);        
+        System.out.println("After replacing every no greater than 30 with 0: " + list3);
+
+        // Removing elements grater than 30  
+        ArrayList<Integer> list4 = new ArrayList<>(List.of(10, 20, 30, 40, 50, 60));
+        ListIterator <Integer> li4 = list4.listIterator();
+        
+        System.out.println("\nBefore removing every no greater than 30: " + list4);
+        while(li4.hasNext()){
+            int num3 = li4.next();
+
+            if(num3 > 30){
+                li4.remove();
+            }
+
+        }   
+        
+        System.out.println("After removing every no greater than 30: " + list4);      
+
+        // Removing elements smaller than 40  
+        ArrayList<Integer> list5 = new ArrayList<>(List.of(10, 20, 30, 40, 50, 60));
+        ListIterator <Integer> li5 = list5.listIterator();
+        
+        System.out.println("\nBefore removing every no smaller than 40: " + list5);
+        while(li5.hasNext()){
+            li5.next();
+        }
+        
+        while(li5.hasPrevious()){
+            int num4 = li5.previous();
+
+            if(num4 < 40){
+                li5.remove();
+            }
+
+        }   
+        
+        System.out.println("After removing every no smaller than 40: " + list5);
     }
 }
