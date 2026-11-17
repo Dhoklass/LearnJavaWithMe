@@ -62,5 +62,37 @@ class LearningEnumeration{
         System.out.println("Total words: " + totalWords);
         System.out.println("Count of elements greater than 4: " + count);
         System.out.println("Longest Word: " + longestWord);
+
+        //Removing Elements from a vector
+        Vector<Integer> num = new Vector<>(List.of(10, 20, 30, 40, 50, 60, 70));
+        Enumeration <Integer> e4 = num.elements();
+
+        System.out.println("Before removing elements greater than 40: " + num);
+
+        while(e4.hasMoreElements()){
+            int x = e4.nextElement();
+            System.out.println(x);
+        }
+        
+        // num.removeIf(y -> y > 40);   // removing element using vector function
+
+        // for(int i = num.size() - 1; i >= 0; i--){    //removing element using backward for loop
+        //     if(num.get(i) > 40){
+        //         num.remove(i);
+        // }
+
+
+        // Removing element using iterator
+        Iterator <Integer> it = num.iterator();
+
+        while(it.hasNext()){
+            int z = it.next();
+
+            if(z > 40){
+                it.remove();
+            }
+        }
+        
+        System.out.println("After removing elements greater than 40: " + num);
     }
 }
