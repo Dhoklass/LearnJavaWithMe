@@ -21,7 +21,7 @@ class LearningListIterator{
         ArrayList<Integer> list2 = new ArrayList<>(List.of(10, 20, 30, 40, 50));
         ListIterator <Integer> li2 = list2.listIterator();
 
-        System.out.println("\nBefore insertion of 100 after every element element greater than 25: " + list2);
+        System.out.println("\nBefore insertion of 100 after every element greater than 25: " + list2);
 
         while(li2.hasNext()){
             int num = li2.next();
@@ -89,6 +89,7 @@ class LearningListIterator{
         HashSet <Integer> hs = new HashSet<>();
         ListIterator <Integer> li6 = list6.listIterator();
 
+        System.out.println("\nBefore removing duplicates: " + list6);
         while(li6.hasNext()){
             int num5 = li6.next();
 
@@ -99,7 +100,7 @@ class LearningListIterator{
                 hs.add(num5);
             }
         }
-        System.out.println(list6);
-        System.out.println(hs);
+        System.out.println("After removing duplicates: " + list6);
     }
+
 }
