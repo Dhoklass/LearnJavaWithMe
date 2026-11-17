@@ -38,8 +38,29 @@ class LearningEnumeration{
         System.out.println("Count of nos greater than 40: " + countGreaterThan40);
 
         // Enumeration with strings
+        int totalWords = 0;
+        int count = 0;
+        
+
         Vector<String> words = new Vector<>(List.of("Java", "Python", "C", "JavaScript", "Go", "Spring"));
         Enumeration<String> e3 = words.elements();
-    
+        String longestWord = words.getFirst();
+
+        while(e3.hasMoreElements()){
+            String m = e3.nextElement();
+            totalWords++ ;
+            if(m.length() > 4){
+                count += 1;
+            }
+
+            if(m.length() > longestWord.length()){
+                longestWord = m;
+            }
+
+            
+        }
+        System.out.println("Total words: " + totalWords);
+        System.out.println("Count of elements greater than 4: " + count);
+        System.out.println("Longest Word: " + longestWord);
     }
 }
