@@ -1,5 +1,12 @@
 import java.util.*;
 
+    class MyLRU extends LinkedHashMap<Integer,String>{
+        @Override
+        protected boolean removeEldestEntry(Map.Entry<Integer, String> eldest){
+            return size() > 3;  
+        }
+    }
+
     class LHMRemoveEntrylessthan50{
         public static void main(String[] args) {
             // LinkedHashMap<Integer, Integer> map = new LinkedHashMap<>();
@@ -84,7 +91,22 @@ import java.util.*;
             System.out.println(map);
 
             // removeEldestEntry
+            LinkedHashMap <Integer, String> lhm2 = new LinkedHashMap<>(10, 0.75f, true);
             
+            MyLRU cache = new MyLRU();
+
+
+            cache.put(1,"Banana");
+            cache.put(2,"Apple");
+            cache.put(3, "Mango");
+
+            System.out.println(cache);
+
+            System.out.println(cache.get(2));
+            
+            cache.put(4,"PineApple");
+
+            System.out.println(cache);
 
             
         }
