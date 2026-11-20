@@ -68,10 +68,18 @@ class NumberGuessingGame{
         submitButton.addActionListener(e ->{
             int guess;
             try {
-                int guess = Integer.parseInt(guessInput.getText());
-                guessInput.setText("");    
-            } catch (Exception e) {
-                System.out.println("Please enter a valid number!");
+                guess = Integer.parseInt(guessInput.getText());  
+            } 
+            catch (NumberFormatException ex) {
+                feedback.setText("Please enter a valid number!");
+                guessInput.setText("");
+                return;
+            }
+
+            if(guess < 1 || guess > 100){
+                feedback.setText("Invalid input! Number cannot be less than 1 or greater than 100!");
+                guessInput.setText("");                
+                return;
             }
             
             attemptCount[0]++;
@@ -101,43 +109,6 @@ class NumberGuessingGame{
                 submitButton.setEnabled(false);
 
             }
-
-            
-
-
-
-            // clickCount[0]++;
-
-            // if(clickCount[0] == 1){
-            //     feedback.setText("Button Clicked!");
-            //     attempts.setText("Attempts: 1/7");
-            // }
-            // else if(clickCount[0] == 2){
-            //     feedback.setText("Try Again!");
-            //     attempts.setText("Attempts: 2/7");
-            // }
-            // else if(clickCount[0] == 3){
-            //     feedback.setText("Enter Another Number!");
-            //     attempts.setText("Attempts: 3/7");
-            // }
-            // else if(clickCount[0] == 4){
-            //     feedback.setText("Keep Clicking!, You clicked " + clickCount[0] + " Times!");
-            //     attempts.setText("Attempts: 4/7");
-            // }
-            // else if(clickCount[0] == 5){
-            //     feedback.setText("Keep Clicking!, You clicked " + clickCount[0] + " Times!");
-            //     attempts.setText("Attempts: 5/7");
-            // }
-            // else if(clickCount[0] == 6){
-            //     feedback.setText("Keep Clicking!, You clicked " + clickCount[0] + " Times!");
-            //     attempts.setText("Attempts: 6/7");
-            // }
-            // else if(clickCount[0] >= 7){
-            //     feedback.setText("Keep Clicking!, You clicked " + clickCount[0] + " Times!");
-            //     attempts.setText("Attempts: 7/7");
-            //     feedback.setText("Loser!");
-            //     submitButton.setEnabled(false);
-            // }
             
         });
 
@@ -148,4 +119,3 @@ class NumberGuessingGame{
     }
 }
 
-guide 
